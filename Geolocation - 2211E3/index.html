@@ -1,0 +1,99 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<title> Testing Support for Geolocation in Browsers</title>
+
+</head> -->
+<!-- <body> -->
+<!-- <input type="button" value="Geolocation Support"onClick="display_location_enabled()"></input> -->
+<!-- <button onclick="getLocation()">Get User`s Location</button>
+
+
+<script src="./app.js"></script>
+</body></html> -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<title>Handling Error</title>
+</head>
+<body>
+<input type="button" value="Display Location" onclick="getLocation()"/>
+
+<script src="./app.js"></script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p contenteditable="true">This is my text</p>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<title>Drag and Drop API</title>
+</head>
+<body>
+<div id="div" style="border: red 2px solid; height:125px;
+width:75px; padding: 10px">
+<img src="./gettyimages-184944186-612x612.jpg" height="75" width="75" id="image1"
+draggable="true"/>
+</div>
+</body> </html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Drag and Drop API</title>
+<script>
+function drag_image(event)
+{
+event.dataTransfer.setData("image", event.target.id);
+}
+</script> </head>
+<body>
+<div id="div1" style="border: blue 2px solid; height:125px;
+width:75px; padding: 10px">
+<img src="./gettyimages-184944186-612x612.jpg" height="75" width="75" id="image1"
+draggable="true" ondragstart="drag_image(event)"/>
+</div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html >
+<head>
+<title>Drag and Drop API</title>
+<script>
+function drag_image(event) {
+event.dataTransfer.setData("image", event.target.id);
+}
+function allow_drop(event)
+{
+event.preventDefault();
+}
+function drop_image(event) {
+var data=event.dataTransfer.getData("image");
+event.target.appendChild(document.getElementById(data));
+}
+</script> </head>
+<body>
+<div id="div1" style="border: blue 2px solid; height:125px;
+width:75px; padding: 10px">
+<img src="./gettyimages-184944186-612x612.jpg" height="75" width="75" id="image1"
+draggable="true" ondragstart="drag_image(event)"/>
+</div>
+<br/>
+<div id="div2" style="border: red 2px solid; height:125px;
+width:75px; padding: 10px" ondrop="drop_image(event)"
+ondragover="allow_drop(event)">
+</div>
+</body>
+</html>
+For
